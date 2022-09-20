@@ -26,15 +26,8 @@ public class AuthorController {
         return authorService.updateAuthor(author);
     }
 
-    @DeleteMapping("/author/{id_author}")
-    public void deleteAuthor(@PathVariable(value="id_author") Integer idAuthor) {
-        Author author = authorService.getAuthorById(idAuthor);
+    @DeleteMapping("/author/")
+    public void deleteAuthor(@RequestBody Author author) {
         authorService.deleteAuthor(author);
     }
-
-
-
-
-
-
 }
